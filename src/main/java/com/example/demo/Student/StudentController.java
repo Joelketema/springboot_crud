@@ -20,7 +20,7 @@ public class StudentController {
         return studentService.getStudents();
 
     }
-    record NewStudentRequest(String name, String email, LocalDate dateOfBirth, Integer age){}
+    record NewStudentRequest(String name, String email, Integer age){}
 
     @PostMapping("api/v1/student")
     public void createStudent(@RequestBody NewStudentRequest request){
